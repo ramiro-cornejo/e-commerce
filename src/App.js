@@ -1,6 +1,24 @@
+/*
 import logo from './logo.svg';
 import './App.css';
+*/
+import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import './components/ItemListContainer/ItemListContainer.css';
+import { NavBar } from "./components/NavBar/NavBar";
 
+
+function App() {
+  return (
+    <>
+      <NavBar/>
+      <ItemListContainer greeting="Bienvenidos a MALBA vinoteca"/>
+    </>
+  );
+
+}
+
+/* 
+//Primer ejemplo clase 01
 function App() {
   return (
     <div className="App">
@@ -21,5 +39,6 @@ function App() {
     </div>
   );
 }
+*/
 
 export default App;
