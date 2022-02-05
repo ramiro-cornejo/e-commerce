@@ -1,16 +1,15 @@
 import { Button, Card } from "react-bootstrap"
 //import Button from 'react-bootstrap/Button'
 
-export const Producto = () => {
+export const Producto = ({title, content}) => {
     return (
         <>
-            <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            <Card style={{ width: '16rem' }}>
+            <Card.Img variant="top" src="https://via.placeholder.com/150" />
             <Card.Body>
-                <Card.Title>Vino Tinto</Card.Title>
+                <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                    {content}
                 </Card.Text>
                 <Button variant="primary">Comprar</Button>
             </Card.Body>
