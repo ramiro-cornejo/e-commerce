@@ -3,14 +3,16 @@ import './NavBar.scss'
 
 export const NavBar = () => {
     return (
+        <>
         <header className="header">
             <h1>LOGO</h1>
 
             <nav className="header-nav">
-                <a className="header-link">Enlace 1</a>
-                <a className="header-link">Enlace 2</a>
-                <a className="header-link">Enlace 3</a>
+                <p className="header-link">Enlace 1</p>
+                <p className="header-link">Enlace 2</p>
+                <p className="header-link">Enlace 3</p>
             </nav>
         </header>
+        </>
     )
 }
