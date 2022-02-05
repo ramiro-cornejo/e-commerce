@@ -1,0 +1,14 @@
+.my-boton {
+    color: white;
+    background-color: #8a1534;
+    border: none;   
+    border-radius: 10px;
+    padding: 8px 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: lighten($color: #8a1534, $amount: 10%);
+    }
+
+}

@@ -1,5 +1,9 @@
+import { Boton } from '../../ejemplos/boton/Boton'
+import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
 import { Nav, Producto } from '../../ejemplos/Producto'
 import './ItemListContainer.scss'
+
+
 export const ItemListContainer = ( {greeting} ) => {
 
     const obj = {
@@ -8,9 +12,12 @@ export const ItemListContainer = ( {greeting} ) => {
         precio:  1550 
     }
     
+    const clickear = () => {
+        console.log('Enviar al carrito')
+    }
 
     return (
-        <section className="item-list-container">
+        <Contenedor>
             <h2>{greeting}</h2>
             <hr/>
 
@@ -19,6 +26,9 @@ export const ItemListContainer = ( {greeting} ) => {
             <Producto title={obj.titulo} content={obj.desc}/>
             <Producto title={obj.titulo} content={obj.desc}/>
             
-        </section>
+            <Boton click={clickear}>Ver más</Boton>
+        </Contenedor>
+            
+        
     )
 }

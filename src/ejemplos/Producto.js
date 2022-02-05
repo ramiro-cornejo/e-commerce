@@ -14,8 +14,6 @@ export const Producto = ({title, content}) => {
                 <Button variant="primary">Comprar</Button>
             </Card.Body>
             </Card>
-            <Button variant="secondary">Ver más</Button>{' '}
-            
 </>
     )
 }
