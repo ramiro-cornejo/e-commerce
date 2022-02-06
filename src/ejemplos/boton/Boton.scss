@@ -11,4 +11,8 @@
         background-color: lighten($color: #8a1534, $amount: 10%);
     }
 
+    &:active {
+        background-color: darken($color: #8a1534, $amount: 10%);
+    }
+
 }
