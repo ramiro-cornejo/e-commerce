@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react'
-import { Boton } from '../../ejemplos/boton/Boton'
-import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
-//import { Nav, Producto } from '../../ejemplos/Producto'
 import './ItemListContainer.scss'
 import { pedirDatos } from '../../helpers/pedirDatos'
-import { stock } from '../../data/stock'
+import { Item } from '../Item/Item'
+import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
 
 
-export const ItemListContainer = ( {greeting} ) => {
+
+
+export const ItemListContainer = ( ) => {
     
     const [productos, setProductos] = useState ([])
+    const [loading, setLoading] = useState(false)
 
     //Promise
     useEffect(() => {
         //console.log(pedirDatos) //estado pendiente
-
+        setLoading(true)
         // .then(res) .catch(err)
         pedirDatos()
             .then((res) => {
@@ -25,7 +26,8 @@ export const ItemListContainer = ( {greeting} ) => {
                 console.log(err)
             })
             .finally(() => {
-                console.log("Fin de proceso")
+                //console.log("Fin de proceso")
+                setLoading(false)
             })
 
     },[])
@@ -33,18 +35,25 @@ export const ItemListContainer = ( {greeting} ) => {
 
     //Boton
     const clickear = () => {
-        console.log('Enviar al carrito')
+        console.log('Ver más productos')
     }
 
     return (
-        <Contenedor>
-            <h2>{greeting}</h2>
-            <hr/>
+        <>
+        {
+            loading
+                ? <h3>Cargando galería</h3>
+                : <Contenedor>
+                    <h2>Productos</h2>
+                    <hr/>
+                    <div className="row">
+                        { productos.map ( (el) => <Item key={el.id} {...el}/>)}
+                    </div>
+                </Contenedor>
+        }
             
-            {JSON.stringify(productos)}
-            <Boton click={clickear}>Ver más</Boton>
-        </Contenedor>
             
-        
+        </>
     )
 }
+

@@ -1,7 +1,7 @@
 import { Button, Card } from "react-bootstrap"
-//import Button from 'react-bootstrap/Button'
 
-export const Producto = ({titulo, desc, precio, img}) => {
+
+export const Item = ({titulo, desc, precio, img}) => {
     return (
         <>
             <Card style={{ width: '16rem', margin: '12px' }}>
@@ -12,7 +12,7 @@ export const Producto = ({titulo, desc, precio, img}) => {
                     {desc}
                 </Card.Text>
                 <Card.Text>
-                    {precio}
+                    Precio: ${precio}
                 </Card.Text>
                 <Button variant="primary">Comprar</Button>
             </Card.Body>
