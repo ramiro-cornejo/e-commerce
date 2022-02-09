@@ -3,8 +3,8 @@ import { Boton } from '../../ejemplos/boton/Boton'
 import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
 //import { Nav, Producto } from '../../ejemplos/Producto'
 import './ItemListContainer.scss'
-
 import { stock } from '../../data/stock'
+
 
 export const ItemListContainer = ( {greeting} ) => {
     
@@ -15,7 +15,7 @@ export const ItemListContainer = ( {greeting} ) => {
 
         return new Promise((resolve, reject) => {
             setTimeout(() => {
-                resolve(stock)
+                    resolve(stock)
                 //if (res === true) {
                 //    resolve('Promesa resuelta')
                 //} else {
@@ -24,7 +24,6 @@ export const ItemListContainer = ( {greeting} ) => {
             }, 2000) //2 seg se resuelve
         })
     }  
-
     useEffect(() => {
         //console.log(pedirDatos) //estado pendiente
 
@@ -32,6 +31,7 @@ export const ItemListContainer = ( {greeting} ) => {
         pedirDatos()
             .then((res) => {
                 setProductos(res)
+                //console.log(res)
             })
             .catch((err) => {
                 console.log(err)
@@ -52,9 +52,8 @@ export const ItemListContainer = ( {greeting} ) => {
         <Contenedor>
             <h2>{greeting}</h2>
             <hr/>
-
-            {JSON.stringify(productos)}
             
+            {JSON.stringify(productos)}
             <Boton click={clickear}>Ver más</Boton>
         </Contenedor>
             
