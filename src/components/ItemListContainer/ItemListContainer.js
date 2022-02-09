@@ -3,6 +3,7 @@ import { Boton } from '../../ejemplos/boton/Boton'
 import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
 //import { Nav, Producto } from '../../ejemplos/Producto'
 import './ItemListContainer.scss'
+import { pedirDatos } from '../../helpers/pedirDatos'
 import { stock } from '../../data/stock'
 
 
@@ -11,19 +12,6 @@ export const ItemListContainer = ( {greeting} ) => {
     const [productos, setProductos] = useState ([])
 
     //Promise
-    const pedirDatos = () => {
-
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                    resolve(stock)
-                //if (res === true) {
-                //    resolve('Promesa resuelta')
-                //} else {
-                //    reject('Promesa rechazada')
-                //}    
-            }, 2000) //2 seg se resuelve
-        })
-    }  
     useEffect(() => {
         //console.log(pedirDatos) //estado pendiente
 
