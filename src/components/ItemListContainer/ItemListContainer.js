@@ -34,9 +34,9 @@ export const ItemListContainer = ( ) => {
     
 
     //Boton
-    const clickear = () => {
+    /*const clickear = () => {
         console.log('Ver más productos')
-    }
+    }*/
 
     return (
         <>
