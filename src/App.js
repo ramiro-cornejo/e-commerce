@@ -9,7 +9,7 @@ import './styles/styles.scss';
 
 import { Nosotros } from './components/Nosotros/Nosotros';
 import { Contacto } from './components/Contacto/Contacto';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 
 
 
@@ -23,6 +23,8 @@ function App() {
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/Nosotros" element={<Nosotros/>} />
           <Route path="/Contacto" element={<Contacto/>} />
+          <Route path='*' element={<Navigate to='/'/> }/>
+          {/*<Route path='*' element={<Error404 to='/'/> }/>*/}
         </Routes>
         
       </BrowserRouter>

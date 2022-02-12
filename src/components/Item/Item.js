@@ -14,7 +14,7 @@ export const Item = ({titulo, desc, precio, img}) => {
                 <Card.Text>
                     Precio: ${precio}
                 </Card.Text>
-                <Button variant="primary">Comprar</Button>
+                <Button variant="primary" style={{color: 'white',background: '#8a1534', border: 'none' }}>Comprar</Button>
             </Card.Body>
             </Card>
 </>

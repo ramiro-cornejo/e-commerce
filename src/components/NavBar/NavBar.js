@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import './NavBar.scss'
 
 
@@ -5,12 +6,16 @@ export const NavBar = () => {
     return (
         <>
         <header className="header">
-            <h1>MALBA vinoteca</h1>
+            
+            <Link to='/' style={{textDecoration: 'none'}}>
+                <h1>MALBA vinoteca</h1>
+            </Link>
 
             <nav className="header-nav">
-                <p className="header-link">Enlace 1</p>
-                <p className="header-link">Enlace 2</p>
-                <p className="header-link">Enlace 3</p>
+                <Link to='/' className='header-link'>Productos</Link>
+                <Link to='/Nosotros' className='header-link'>Nosotros</Link>
+                <Link to='/Contacto' className='header-link'>Contacto</Link>
+                
             </nav>
         </header>
         </>
