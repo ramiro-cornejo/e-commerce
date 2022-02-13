@@ -9,6 +9,8 @@ import './styles/styles.scss';
 import { Nosotros } from './components/Nosotros/Nosotros';
 import { Contacto } from './components/Contacto/Contacto';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
+import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
+
 
 
 
@@ -21,8 +23,10 @@ function App() {
         <Routes>
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/Productos/:catId" element={<ItemListContainer/>} />
+          <Route path="Detail/:itemId" element={<ItemDetailContainer/>}/>
           <Route path="/Nosotros" element={<Nosotros/>} />
           <Route path="/Contacto" element={<Contacto/>} />
+          
           <Route path='*' element={<Navigate to='/'/> }/>
           {/*<Route path='*' element={<Error404 to='/'/> }/>*/}
         </Routes>
