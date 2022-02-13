@@ -19,7 +19,7 @@ export const ItemDetailContainer = () => {
 
         pedirDatos()
             .then((res) => {
-                setItem(res.find((el) => el.id === Number (itemId)))
+                setItem(res.find((el) => el.id === Number(itemId)))
         })
         .finally(() => {
             setLoading(false)
