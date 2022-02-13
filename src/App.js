@@ -6,7 +6,6 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import { NavBar } from "./components/NavBar/NavBar";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss';
-
 import { Nosotros } from './components/Nosotros/Nosotros';
 import { Contacto } from './components/Contacto/Contacto';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
@@ -21,6 +20,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<ItemListContainer/>} />
+          <Route path="/Productos/:catId" element={<ItemListContainer/>} />
           <Route path="/Nosotros" element={<Nosotros/>} />
           <Route path="/Contacto" element={<Contacto/>} />
           <Route path='*' element={<Navigate to='/'/> }/>

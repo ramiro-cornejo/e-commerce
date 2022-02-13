@@ -12,9 +12,9 @@ export const NavBar = () => {
             </Link>
 
             <nav className="header-nav">
-                <Link to='/' className='header-link'>Productos</Link>
-                <Link to='/Nosotros' className='header-link'>Nosotros</Link>
-                <Link to='/Contacto' className='header-link'>Contacto</Link>
+                <Link to='/Productos/Vino Tinto' className='header-link'>Vino Tinto</Link>
+                <Link to='/Productos/Vino Blanco' className='header-link'>Vino Blanco</Link>
+                <Link to='/Productos/Vino Espumante' className='header-link'>Vino Espumante</Link>
                 
             </nav>
         </header>

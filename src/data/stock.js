@@ -7,6 +7,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 1',
         precio:  1550,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Tinto',
     },
     {
         titulo: 'Vino 2',
@@ -14,6 +15,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 2',
         precio:  550,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Blanco',
     },
     {
         titulo: 'Vino 3',
@@ -21,6 +23,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 3',
         precio:  750,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Tinto',
     },
     {
         titulo: 'Vino 4',
@@ -28,6 +31,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 4',
         precio:  950,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Blanco',
     },
     {
         titulo: 'Vino 5',
@@ -35,6 +39,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 5',
         precio:  2550,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Espumante',
     },
     {
         titulo: 'Vino 6',
@@ -42,6 +47,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 6',
         precio:  450,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino blanco',
     },
     {
         titulo: 'Vino 7',
@@ -49,6 +55,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 7',
         precio:  1150,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Espumante',
     },
     {
         titulo: 'Vino 8',
@@ -56,6 +63,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 8',
         precio:  650,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Tinto',
     },
     {
         titulo: 'Vino 9',
@@ -63,6 +71,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 9',
         precio:  1220,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Blanco',
     },
     {
         titulo: 'Vino 10',
@@ -70,6 +79,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 10',
         precio:  3200,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Espumante',
     },
     {
         titulo: 'Vino 11',
@@ -77,6 +87,7 @@ export const stock = [
         desc: 'Caracteristicas del vino 11',
         precio:  1220,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Tinto',
     },
     {
         titulo: 'Vino 12',
@@ -84,5 +95,6 @@ export const stock = [
         desc: 'Caracteristicas del vino 12',
         precio:  1220,
         img:  'https://via.placeholder.com/150',
+        categoria: 'Vino Blanco',
     }
 ]

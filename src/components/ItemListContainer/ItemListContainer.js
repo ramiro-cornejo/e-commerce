@@ -1,16 +1,20 @@
 import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
 import { pedirDatos } from '../../helpers/pedirDatos'
+//import { ItemList} from '../ItemList/ItemList'
 import { Item } from '../Item/Item'
 import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
-
-
+import { useParams } from 'react-router-dom';
 
 
 export const ItemListContainer = ( ) => {
     
     const [productos, setProductos] = useState ([])
     const [loading, setLoading] = useState(false)
+
+    const {catId} = useParams()
+    console.log(catId)
+    
 
     //Promise
     useEffect(() => {
@@ -19,8 +23,13 @@ export const ItemListContainer = ( ) => {
         // .then(res) .catch(err)
         pedirDatos()
             .then((res) => {
-                setProductos(res)
-                //console.log(res)
+                if (catId) {
+                    setProductos(res.filter((el) => el.categoria === catId))
+                } else {
+                    setProductos(res)
+                }
+                
+                
             })
             .catch((err) => {
                 console.log(err)
@@ -30,7 +39,7 @@ export const ItemListContainer = ( ) => {
                 setLoading(false)
             })
 
-    },[])
+    },[catId])
     
 
     //Boton
@@ -43,13 +52,13 @@ export const ItemListContainer = ( ) => {
         {
             loading
                 ? <h3>Cargando galería</h3>
-                : <Contenedor>
-                    <h2>Productos</h2>
-                    <hr/>
-                    <div className="row">
-                        { productos.map ( (el) => <Item key={el.id} {...el}/>)}
-                    </div>
-                </Contenedor>
+                    :   <Contenedor>
+                            <h2>Productos</h2>
+                            <hr/>
+                            <div className="row">
+                                { productos.map ( (el) => <Item key={el.id} {...el}/>)}
+                            </div>
+                        </Contenedor>
         }
             
             
