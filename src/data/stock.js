@@ -1,4 +1,5 @@
 
+
 //Array/Objeto
 export const stock = [
     {
@@ -6,7 +7,7 @@ export const stock = [
         id: 1,
         desc: 'Caracteristicas del vino 1',
         precio:  1550,
-        img:  'https://via.placeholder.com/150',
+        img: 'https://iberpark.com/web/image/product.template/44374/image',
         categoria: 'Vino Tinto',
     },
     {

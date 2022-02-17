@@ -5,7 +5,7 @@ export const Item = ({id, titulo, desc, precio, img, categoria}) => {
     return (
         <>
             <Card style={{ width: '16rem', margin: '12px' }}>
-            <Card.Img variant="top" src="https://via.placeholder.com/150" />
+            <Card.Img style={{ width: '8rem', margin: '50px' }} variant="top" src="https://iberpark.com/web/image/product.template/44374/image?unique=5284c0d" />
             <Card.Body>
                 <Card.Title>{titulo}</Card.Title>
                 <Card.Text>
