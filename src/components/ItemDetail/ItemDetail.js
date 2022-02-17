@@ -1,12 +1,22 @@
 
+import {  Card } from "react-bootstrap"
 
 export const ItemDetail = ({id, titulo, desc, precio, img, categoria}) => {
     return (
         <div>
-            <h3>{titulo}</h3>
-            <img src={"https://iberpark.com/web/image/product.template/44374/image"} style={{ width: '8rem', margin: '50px' }} alt={categoria}/>
-            <p>{desc}</p>
-            <h5>Precio: $ {precio}</h5>
+            <Card style={{ width: '16rem', margin: '25px' }}>
+            <Card.Img style={{ width: '8rem', margin: '50px' }} variant="top" src="https://iberpark.com/web/image/product.template/44374/image?unique=5284c0d" />
+            <Card.Body>
+                <Card.Title>{titulo}</Card.Title>
+                <Card.Text>
+                    {desc}
+                </Card.Text>
+                <Card.Text>
+                    Precio: $ {precio}
+                </Card.Text>
+                
+            </Card.Body>
+            </Card>
 
             {/*Hacer evento contador */}
         </div>
