@@ -7,7 +7,7 @@ export const stock = [
         id: 1,
         desc: 'Cordero con Piel de Lobo Malbec. Aroma: aroma y sabor a frutos maduros.',
         precio:  1550,
-        img: 'https://iberpark.com/web/image/product.template/44374/image',
+        pictureUrl: 'https://via.placeholder.com/150',
         categoria: 'Vino Tinto',
     },
     {
