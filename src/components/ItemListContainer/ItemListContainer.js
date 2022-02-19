@@ -41,11 +41,16 @@ export const ItemListContainer = () => {
 
     },[catId])
     
+    /*useEffect (() => {
+        const clickear = () => {
+            console.log('clickear')
+        }
 
-    //Boton
-    /*const clickear = () => {
-        console.log('Ver más productos')
-    }*/
+        window.addEventListener('click', clickear)
+        return () => {
+            window.removeEventListener('click', clickear)
+        }
+    }, [])*/
 
     return (
         <>

@@ -9,6 +9,7 @@ export const stock = [
         precio:  1550,
         pictureUrl: 'https://via.placeholder.com/150',
         categoria: 'Vino Tinto',
+        stock: 10,
     },
     {
         titulo: 'Vino Blanco',
@@ -17,6 +18,7 @@ export const stock = [
         precio:  550,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Blanco',
+        stock: 10,
     },
     {
         titulo: 'Vino Tinto',
@@ -25,6 +27,7 @@ export const stock = [
         precio:  750,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Tinto',
+        stock: 10,
     },
     {
         titulo: 'Vino Blanco',
@@ -33,6 +36,7 @@ export const stock = [
         precio:  950,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Blanco',
+        stock: 10,
     },
     {
         titulo: 'Vino Espumante',
@@ -41,6 +45,7 @@ export const stock = [
         precio:  2550,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Espumante',
+        stock: 10,
     },
     {
         titulo: 'Vino Blanco',
@@ -49,6 +54,7 @@ export const stock = [
         precio:  450,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Blanco',
+        stock: 10,
     },
     {
         titulo: 'Vino Espumante',
@@ -57,6 +63,7 @@ export const stock = [
         precio:  1150,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Espumante',
+        stock: 10,
     },
     {
         titulo: 'Vino Tinto',
@@ -65,6 +72,7 @@ export const stock = [
         precio:  650,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Tinto',
+        stock: 10,
     },
     {
         titulo: 'Vino Blanco',
@@ -73,6 +81,7 @@ export const stock = [
         precio:  1220,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Blanco',
+        stock: 10,
     },
     {
         titulo: 'Vino Espumante',
@@ -81,6 +90,7 @@ export const stock = [
         precio:  3200,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Espumante',
+        stock: 10,
     },
     {
         titulo: 'Vino Tinto',
@@ -89,6 +99,7 @@ export const stock = [
         precio:  1220,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Tinto',
+        stock: 10,
     },
     {
         titulo: 'Vino Blanco',
@@ -97,5 +108,6 @@ export const stock = [
         precio:  1220,
         img:  'https://via.placeholder.com/150',
         categoria: 'Vino Blanco',
+        stock: 10,
     }
 ]
