@@ -1,8 +1,7 @@
-import { useState } from "react"
 
-export const ItemCount = ({max, min = 0}) => {
 
-    const [counter, setCounter] = useState(min)
+export const ItemCount = ({max, min = 0, counter, setCounter }) => {
+
 
     const handleSumar = (e) => {
         // operador lógico AND

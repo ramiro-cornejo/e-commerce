@@ -1,8 +1,20 @@
 
+import { useState } from "react"
 import {  Card } from "react-bootstrap"
 import { ItemCount } from "../ItemCount/ItemCount"
 
+
 export const ItemDetail = ({id, titulo, desc, precio,stock, img, categoria}) => {
+    
+    const [cantidad, setCantidad] = useState(0)
+
+    const handleAgregar = () => {
+        if (cantidad === 0) return
+        const addItem = {
+            id, titulo, precio ,categoria, stock , cantidad
+        }
+        console.log(addItem)
+    }
     return (
         <div>
             <Card style={{ width: '16rem', margin: '25px' }}>
@@ -15,7 +27,19 @@ export const ItemDetail = ({id, titulo, desc, precio,stock, img, categoria}) => 
                 <Card.Text>
                     Precio: $ {precio}
                 </Card.Text>
-                <ItemCount max={ stock }/>
+
+                <ItemCount 
+                    max={ stock } 
+                    counter={ cantidad } 
+                    setCounter={setCantidad} 
+                />
+
+                <button 
+                    className="btn btn-success my-2"
+                    onClick={handleAgregar}>
+
+                    Agregar al carrito
+                </button>
             </Card.Body>
             </Card>
 
