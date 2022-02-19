@@ -1,7 +1,7 @@
 
 
 export const ItemCount = ({max, min = 0, counter, setCounter }) => {
-
+    
 
     const handleSumar = (e) => {
         // operador lógico AND
