@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { BsTrash } from 'react-icons/bs'
+import { Card, Row } from "react-bootstrap"
 
 
 
@@ -16,13 +17,27 @@ const {cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext)
                 
                 {
                     cart.map ((item) => (
-                        <div key={item.id}>
-                            <h4>{item.titulo}</h4>
-                            <p>Cantidad: {item.cantidad}</p>
-                            <p>Precio: ${item.cantidad * item.precio}</p>
-                            <button className="btn btn-danger" onClick={() => eliminarItem(item.id)}>
+                        <div key={item.id} style={{display: 'flex', flexDirection: 'row'} } >
+                            <Card style={{ width: '80rem', margin: '25px', flexDirection: 'row'}}>
+                            
+                            <Card.Img style={{ width: '4rem', height: '8rem',  margin: '15px' }} variant="top" src="https://iberpark.com/web/image/product.template/44374/image?unique=5284c0d" />
+                            
+                            
+                            <h4 className="mx-5 my-5">{item.titulo}</h4>
+                            
+                            
+                            <p className="mx-4 my-5">Cantidad: {item.cantidad}</p>
+                            <p className="mx-5 my-5">Precio: ${item.cantidad * item.precio}</p>
+                            
+                            
+                            
+                            
+                            <button className="btn btn-danger my-3 mx-8" onClick={() => eliminarItem(item.id)}>
                                 <BsTrash/>
                             </button>
+                            
+                            
+                            </Card>
                         </div>
                     ))
                 }
