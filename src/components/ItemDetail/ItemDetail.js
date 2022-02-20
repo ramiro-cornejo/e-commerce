@@ -12,7 +12,7 @@ export const ItemDetail = ({id, titulo, desc, precio,stock, img, categoria}) => 
     const [cantidad, setCantidad] = useState(0)
 
     const {cart, agregarAlCarrito, isInCart} = useContext(CartContext)
-    console.log(cart)
+    
 
     const handleAgregar = () => {
         if (cantidad === 0) return

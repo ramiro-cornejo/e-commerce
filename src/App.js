@@ -27,13 +27,23 @@ function App() {
     return cart.some((prod) => prod.id === id)
   }
 
+  const cantidadCart = () => {
+    return cart.reduce((acc, prod) => acc + prod.cantidad, 0)
+  }
+
+  const totalCart = () => {
+    return cart.reduce((acc, prod) => acc + prod.cantidad * prod.precio , 0)
+  }
+
   return (
     
     <CartContext.Provider value={
         {
           cart,
           agregarAlCarrito,
-          isInCart
+          isInCart,
+          cantidadCart,
+          totalCart
         }
       }>
 
