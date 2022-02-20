@@ -11,7 +11,7 @@ export const ItemDetail = ({id, titulo, desc, precio,stock, img, categoria}) => 
 
     const [cantidad, setCantidad] = useState(0)
 
-    const {cart, agregarAlCarrito, isInCart} = useContext(CartContext)
+    const {agregarAlCarrito, isInCart} = useContext(CartContext)
     
 
     const handleAgregar = () => {
