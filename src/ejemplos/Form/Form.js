@@ -52,6 +52,7 @@ export const Form = () => {
 }
 
 // form for dummies
+//2hs 
 
 // const [nombre, setNombre] = useState('')
 // const [email, setEmail] = useState('')

@@ -10,13 +10,33 @@ import { Nosotros } from './components/Nosotros/Nosotros';
 import { Contacto } from './components/Contacto/Contacto';
 import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
-
+import {CartContext} from './context/CartContext'
+import { useState } from "react";
 
 
 
 function App() {
+
+  const [cart, setCart] = useState([])
+
+  const agregarAlCarrito = (item) => {
+    setCart([...cart, item])
+  }
+
+  const isInCart = (id) => {
+    return cart.some((prod) => prod.id === id)
+  }
+
   return (
-    <>
+    
+    <CartContext.Provider value={
+        {
+          cart,
+          agregarAlCarrito,
+          isInCart
+        }
+      }>
+
       <BrowserRouter>
         <NavBar/>
 
@@ -32,8 +52,9 @@ function App() {
         </Routes>
         
       </BrowserRouter>
-      
-    </>
+
+      </CartContext.Provider>
+    
   );
 
 }
