@@ -10,7 +10,7 @@ export const Cart = () => {
 const {cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext)
 
     //render si el cart esta vacio
-    //opcion A
+    //opcion A (recomendada)
     if (cart.length === 0) {
         return <div className="container my-4" >
             <h2>Carrito sin productos</h2>

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
 import { pedirDatos } from '../../helpers/pedirDatos'
-//import { ItemList} from '../ItemList/ItemList'
 import { Item } from '../Item/Item'
 import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
 import { useParams } from 'react-router-dom'
+import {Loader} from '../Loader/Loader.js'
 
 
 export const ItemListContainer = () => {
@@ -54,7 +54,7 @@ export const ItemListContainer = () => {
         <>
         {
             loading
-                ? <h3>Cargando galería</h3>
+                ? <Loader/>
                 :   <Contenedor>
                     <h2>Productos</h2>
                     <hr/>

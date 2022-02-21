@@ -2,4 +2,12 @@
 .cart-widget {
     font-size: 30px;
     color: #ffffff;
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s ease-out;
+}
+
+.cart-hidden {
+    opacity: 0;
+    visibility: hidden;
 }
