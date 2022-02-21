@@ -1,12 +1,26 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { BsTrash } from 'react-icons/bs'
-import { Card, Row } from "react-bootstrap"
+import { Card } from "react-bootstrap"
+import { Link } from "react-router-dom"
 
 
 
 export const Cart = () => {
 const {cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext)
+
+    //render si el cart esta vacio
+    //opcion A
+    if (cart.length === 0) {
+        return <div className="container my-4" >
+            <h2>Carrito sin productos</h2>
+            <Link to="/" className="btn btn-primary" >Volver</Link>
+        </div>
+    }
+    //opcion B
+    /*if (cart.length === 0) {
+        return <Navigate to={"/"}/>
+    }*/
 
     return (
         <div className="container my-4">

@@ -55,13 +55,13 @@ export const ItemListContainer = () => {
         {
             loading
                 ? <h3>Cargando galería</h3>
-                    :   <Contenedor>
-                            <h2>Productos</h2>
-                            <hr/>
-                            <div className="row">
-                                { productos.map ( (el) => <Item key={el.id} {...el}/>)}
-                            </div>
-                        </Contenedor>
+                :   <Contenedor>
+                    <h2>Productos</h2>
+                    <hr/>
+                    <div className="row">
+                        { productos.map ( (el) => <Item key={el.id} {...el}/>)}
+                    </div>
+                    </Contenedor>
         }
             
             
