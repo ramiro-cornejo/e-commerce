@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import './ItemListContainer.scss'
-import { pedirDatos } from '../../helpers/pedirDatos'
 import { Item } from '../Item/Item'
 import { Contenedor } from '../../ejemplos/Contenedor/Contenedor'
 import { useParams } from 'react-router-dom'
 import {Loader} from '../Loader/Loader.js'
+import { db } from '../../firebase/config'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 
 
 export const ItemListContainer = () => {
@@ -12,43 +13,34 @@ export const ItemListContainer = () => {
     const [productos, setProductos] = useState ([])
     const [loading, setLoading] = useState(false)
 
+    console.log(productos)
+
     const {catId} = useParams()
 
     //Promise
     useEffect(() => {
         //console.log(pedirDatos) //estado pendiente
         setLoading(true)
-        // .then(res) .catch(err)
-        pedirDatos()
-            .then((res) => {
-                if (catId) {
-                    setProductos(res.filter((el) => el.categoria === catId))
-                } else {
-                    setProductos(res)
-                }
-                
-                
-            })
-            .catch((err) => {
-                console.log(err)
+        
+        //1- armar referencia
+        const productosRef = collection(db, 'productos')
+        const q = catId ? query(productosRef, where("categoria", "==", catId)) : productosRef
+        //2- pedir esa referencia         
+        getDocs(q)
+            .then((resp) => {
+                setProductos( resp.docs.map((doc) => {
+                    return {
+                        id: doc.id,
+                        ...doc.data()
+                    }
+                }))
             })
             .finally(() => {
-                //console.log("Fin de proceso")
                 setLoading(false)
             })
+        
 
     },[catId])
-    
-    /*useEffect (() => {
-        const clickear = () => {
-            console.log('clickear')
-        }
-
-        window.addEventListener('click', clickear)
-        return () => {
-            window.removeEventListener('click', clickear)
-        }
-    }, [])*/
 
     return (
         <>

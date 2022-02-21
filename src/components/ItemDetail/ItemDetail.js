@@ -6,8 +6,10 @@ import { CartContext } from "../../context/CartContext"
 import { ItemCount } from "../ItemCount/ItemCount"
 
 
-export const ItemDetail = ({id, titulo, desc, precio,stock, img, categoria}) => {
+
+export const ItemDetail = ({id, titulo, desc, precio,stock,oferta, img, categoria}) => {
     
+    const precioFinal = oferta ? precio * 0.85 : precio
 
     const [cantidad, setCantidad] = useState(0)
 
@@ -35,7 +37,7 @@ export const ItemDetail = ({id, titulo, desc, precio,stock, img, categoria}) => 
                     {desc}
                 </Card.Text>
                 <Card.Text>
-                    Precio: $ {precio}
+                    Precio: $ {precioFinal}
                 </Card.Text>
             
                 {

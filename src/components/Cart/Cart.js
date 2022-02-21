@@ -7,6 +7,7 @@ import { Link } from "react-router-dom"
 
 
 export const Cart = () => {
+
 const {cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext)
 
     //render si el cart esta vacio
