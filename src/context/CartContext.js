@@ -22,6 +22,9 @@ export const CartProvider = ({children}) => {
     const totalCart = () => {
         return cart.reduce((acc, prod) => acc + prod.cantidad * prod.precio , 0)
     }
+    const getTotalWithDiscounts = () => {
+        return totalCart() - getTotalWithDiscounts
+    }
 
     const vaciarCart = () => {
         setCart([])
@@ -38,6 +41,7 @@ export const CartProvider = ({children}) => {
             isInCart,
             cantidadCart,
             totalCart,
+            getTotalWithDiscounts,
             vaciarCart,
             eliminarItem
         }}>
