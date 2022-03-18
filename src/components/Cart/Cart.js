@@ -62,7 +62,7 @@ const {cart, totalCart, vaciarCart, eliminarItem } = useContext(CartContext)
 
                 <div className="my-2">
                     <button className="btn btn-danger" onClick={vaciarCart} >Vaciar carrito</button>
-                    <button className="btn btn-success mx-2">Terminar compra</button>
+                    <Link to="/Checkout" className="btn btn-success mx-2">Terminar compra</Link>
                 </div>
             
         </div>

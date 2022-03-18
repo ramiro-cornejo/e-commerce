@@ -21,7 +21,7 @@ export const ItemDetail = ({id, titulo, desc, precio,stock,oferta, img, categori
 
         if (!isInCart(id)) {
             const addItem = {
-                id, titulo, precio ,categoria, stock , cantidad, desc
+                id, titulo, precio ,categoria, stock , cantidad
             }
             agregarAlCarrito(addItem)
         }

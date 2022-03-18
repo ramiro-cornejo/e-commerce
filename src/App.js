@@ -12,6 +12,7 @@ import {BrowserRouter,Routes,Route,Navigate} from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
+import { Checkout } from "./components/Checkout/Checkout";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/Nosotros" element={<Nosotros/>} />
           <Route path="/Contacto" element={<Contacto/>} />
           <Route path="/Cart" element={<Cart/>} />
+          <Route path="/Checkout" element={<Checkout/>} />
           
           <Route path='*' element={<Navigate to='/'/> }/>
           {/*<Route path='*' element={<Error404 to='/'/> }/>*/}
