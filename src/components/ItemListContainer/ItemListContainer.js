@@ -60,7 +60,7 @@ export const ItemListContainer = () => {
         </>
     )
 }
-// VER CORRECCION 
+// simplificación 
 /* {
     loading
                 ? <h3>Cargando galería</h3>

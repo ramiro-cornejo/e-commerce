@@ -2,7 +2,7 @@ import { Button, Card } from "react-bootstrap"
 import { Link } from "react-router-dom"
 
 
-export const Item = ({id, titulo, desc, precio, img, oferta, categoria}) => {
+export const Item = ({id, titulo, desc, precio, oferta}) => {
     
     const precioFinal = oferta ? precio * 0.85 : precio
 

@@ -1,4 +1,3 @@
-import { async } from "@firebase/util"
 import { collection, writeBatch, getDocs, addDoc, Timestamp, updateDoc, doc, getDoc, query, where, documentId } from "firebase/firestore"
 import { useContext, useState } from "react"
 import { Navigate } from "react-router-dom"
@@ -15,7 +14,7 @@ export const Checkout = () => {
 
     const [orderId, setOrderId] = useState(null)
 
-    const generarOrden = async() => {
+    const generarOrden = async (values, cart, totalCart, setOrderId, vaciarCart) => {
         const orden = {
             comprador: values,
             items: cart,
@@ -140,23 +139,3 @@ export const Checkout = () => {
     )
     }
 
-
-
-// ejemplo addDoc
-// addDoc(ordersRef, orden)
-// .then((resp) => {
-
-//     cart.forEach((item) => {
-//         const docRef = doc(db, 'productos', item.id)
-//         getDoc(docRef)
-//             .then((dbDoc) => {
-//                 updateDoc(docRef, {stock: dbDoc.data().stock - item.cantidad})
-//             })
-//     })
-
-//     setOrderId(resp.id)
-//     vaciarCart()
-// })
-// .catch((err) => {
-//     console.log(err)
-// })
