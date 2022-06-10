@@ -10,6 +10,7 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
+import { Footer } from "./components/Footer/Footer"
 
 function App() {
 
@@ -31,8 +32,11 @@ function App() {
           {/*<Route path='*' element={<Error404 to='/'/> }/>*/}
         </Routes>
         
+        <Footer/>
+
       </BrowserRouter>
     </CartProvider>
+    
     
   );
 

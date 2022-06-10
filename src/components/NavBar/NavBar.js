@@ -9,7 +9,7 @@ export const NavBar = () => {
         <header className="header">
             
             <Link to='/' style={{textDecoration: 'none'}}>
-                <h1>MALBA vinoteca</h1>
+                <h1>MALBA</h1>
             </Link>
 
             <nav className="header-nav">
