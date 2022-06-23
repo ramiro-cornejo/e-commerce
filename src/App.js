@@ -1,6 +1,7 @@
 
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { NavBar } from "./components/NavBar/NavBar";
+import { Footer } from "./components/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/styles.scss';
 import { Nosotros } from './components/Nosotros/Nosotros';
@@ -10,7 +11,7 @@ import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetail
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart";
 import { Checkout } from "./components/Checkout/Checkout";
-import { Footer } from "./components/Footer/Footer"
+
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
     <CartProvider>
       <BrowserRouter>
         <NavBar/>
-
+        
         <Routes>
           <Route path="/" element={<ItemListContainer/>} />
           <Route path="/Productos/:catId" element={<ItemListContainer/>} />
@@ -33,7 +34,6 @@ function App() {
         </Routes>
         
         <Footer/>
-
       </BrowserRouter>
     </CartProvider>
     

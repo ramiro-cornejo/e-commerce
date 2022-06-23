@@ -1,45 +1,36 @@
 
 import './Footer.scss';
 
-const Footer = () => {
+export const Footer = () => {
 	return (
-		<footer className="container-fluid bg-white p-2 border-top">
-			<div className="container my-3">
+		<footer className="container-fluid bg-white p-2 border-top ">
+			<div className="container my-3 color">
 				<div className="d-flex flex-wrap justify-content-between">
 					<div className="col-md-3 col-12">
-						<p className="footer-title mb-1">Contacto</p>
-						<p>Puedes contactarnos a través de nuestras redes sociales o vía email</p>
-						<p>contacto@gmail.com</p>
+						<p className="footer-title mb-1">Ver Curriculum</p>
 					</div>
-					<div className="col-md-3 col-12">
-						<p className="footer-title mb-1">Horarios</p>
+					<div className="col-md-3 col-12 copyright">
+						<p className="footer-title mb-1">Copyright © 2022. Realizado por Cornejo Ramiro</p>
 					</div>
 					<div className="col-md-3 col-12">
 						<p className="footer-title mb-1">Redes sociales</p>
 						<a
-							href="https://facebook.com/"
+							href="https://github.com/ramiro-cornejo"
 							className="link-dark icon-link"
 							target="_blank"
 							rel="noreferrer"
 						>
-							
+							GitHub
 						</a>
 						<a
-							href="https://instagram.com/"
+							href="https://www.linkedin.com/in/ramiro-sebasti%C3%A1n-cornejo/"
 							className="link-dark icon-link"
 							target="_blank"
 							rel="noreferrer"
 						>
-							
+							Linkedin
 						</a>
-						<a
-							href="https://github.com/FacuMasino/pedime-reactjs-masino"
-							target="_blank"
-							rel="noreferrer"
-							className="link-dark icon-link"
-						>
-							
-						</a>
+						
 					</div>
 				</div>
 			</div>
@@ -47,4 +38,3 @@ const Footer = () => {
 	);
 };
 
-export default Footer;
